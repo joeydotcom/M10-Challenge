@@ -1,0 +1,208 @@
+/* ✅ Global Box Model Fix */
+html {
+    box-sizing: border-box;
+}
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+  
+/* ✅ Base Styles */
+body {
+    background-color: #F2F2F2;
+    color: #131D26;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Header */
+header {
+    background-color: #D98555;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 4px solid #59331D;
+}
+
+/* ✅ Logo - Prevent oversized stretching */
+header img {
+    max-width: 250px;  /* Ensures the logo stays a reasonable size */
+    height: auto;
+}
+
+/* ✅ Navigation */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #F2F2F2;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #59331D;
+}
+
+/* ✅ Main Section */
+section {
+    background-color: #D98555;
+    color: #F2F2F2; 
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    text-align: left;
+}
+
+/* ✅ Center the content wrapper */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ✅ Contact Button */
+.contact-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ✅ Headings */
+h2 {
+    color: #59331D;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ✅ Paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #F2F2F2;
+    font-family: 'Lato', sans-serif;
+}
+
+p a {
+    color: #131D26;
+}
+
+p a:hover {
+    color: #082b59;
+}
+
+/* ✅ Buttons */
+button {
+    background-color: #59331D;
+    color: #f2f2f2;
+    padding: 12px 24px;
+    border: 2px solid #F2F2F2;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #082b59;
+    border-color: #59331D;
+}
+
+/* ✅ Prevent hover effects from making buttons "jumpy" on mobile */
+@media screen and (min-width: 1024px) {
+    button:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}
+
+/* ✅ Figure & Images */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+}
+
+figure img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* ✅ Make sure only the section images resize properly */
+@media screen and (min-width: 768px) {
+    figure img {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    figure img {
+        width: 40%;
+    }
+}
+
+/* ✅ Figure Caption */
+figcaption {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #59331D;
+}
+
+/* ✅ Footer */
+footer {
+    background-color: #082B59;
+    color: #f2f2f2;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: #f2f2f2;
+    margin: 0 15px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #D98555;
+}
+
+/* ✅ Responsive Media Queries */
+
+/* 📱 Tablet Styles (768px and up) */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    section {
+        max-width: 80%;
+    }
+}
+
+/* 🖥️ Desktop Styles (1024px and up) */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    section {
+        max-width: 70%;
+    }
+}
